@@ -1,0 +1,82 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  padding: 2em 3em;
+}
+
+  .axis-label {
+    font-size: 14px;
+    fill: black;
+    text-anchor: middle;
+    font-weight: bold
+  }
+  .axis {
+    font-size: 10px
+  }
+
+  div {
+    font-size: medium  
+  }
+
+  .tooltip{
+    position      : absolute;
+    text-align    : center;
+    max-width     : 70px;
+    max-height    : 50px;
+    padding       : 8px;
+    border        : none;
+    border-radius : 8px;
+    margin-top    : -30px;
+    font          : 12px sans-serif;
+    background    : Black;
+    color         : whitesmoke;
+    pointer-events: none;
+    opacity: 0
+}
+
+#header {
+  text-align: left;
+  color: #008a77;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.dot {
+    cursor: pointer;
+    fill: rgb(245, 9, 139);
+    opacity: 1;
+    stroke-width: 1;
+    stroke: black
+  }
+.dot:hover {
+    fill: rgb(245, 9, 139);
+    opacity: 0.8;
+    stroke: "black";
+    stroke-width: 2
+  }
+  
+  .trend {
+      fill:none;
+      stroke: black;
+      stroke-width: 2;
+      opacity: 0.75;}
+p {
+    text-align: justify;
+    font-size: 14pt;
+    /* color: rgb(23, 94, 66) */
+}
+a {
+    color:rgb(23, 94, 66);
+    text-decoration: none
+}
+a:hover {
+    text-decoration: underline
+}
+.hover-line {
+  stroke: #6F257F;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
+.area {
+  fill: teal;
+  opacity: .5
+}
