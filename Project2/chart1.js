@@ -27,7 +27,7 @@ export function chart1() {
      * LOAD DATA
      **/
 
-    d3.csv("../Data/CO2EmissionOf9Countries.csv",
+    d3.csv("../data/CO2EmissionOf9Countries.csv",
         d => ({
             year: new Date(d.year, 0, 1),
             country: d.country,
