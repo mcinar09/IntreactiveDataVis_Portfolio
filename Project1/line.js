@@ -27,7 +27,7 @@ let state = { data: [], selectedCountry: null };
 /**
  * LOAD DATA
  **/
-d3.csv("../data/co2_emission1.csv",
+d3.csv("../../data/co2_emission1.csv",
     d => ({
         year: new Date(d.Year, 0, 1),
         country: d.Entity,
