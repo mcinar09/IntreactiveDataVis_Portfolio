@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Narrative Visualization</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CO<sub>2</sub> Emissions in Countries</h1>
+        <h2>Introduction</h2>
+    </header>
+    <div>
+        <div class 'section'>
+            CO<sub>2</sub> emissions are increasing in the world over the years.
+        </div>
+        <div class='section' id='one'>
+            <div class='text'>
+                My text
+            </div>
+        </div>
+        <div class 'graph' id="d3-container-1">
+            <div>
+                <label for="dropdown">Select a Country</label>
+                <select id="dropdown" name="dropdown"></select>
+            </div>
+        </div>
+
+        <div class='section' id='two'>
+            <div class='text'>
+                More text; what are the causes of CO2? What countries have more CO2 emissions?
+
+            </div>
+            <div class='graph' id='d3-container-2'></div>
+        </div>
+        <div class='section' id='three'>
+            <div class='text'>
+                More text; What do we see in graphs?
+
+            </div>
+        </div>
+        <div class='section' id='four'>
+            <div class='graph' id='d3-container-3'></div>
+        </div>
+    </div>
+    <script src="../lib/d3.js"></script>
+    <script src="main.js" type="module"></script>
+
+
+
+</body>
+
+</html>
