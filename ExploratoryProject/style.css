@@ -15,8 +15,8 @@ body {
   }
 
   div {
-    font-size: medium  
-  }
+    display: inline-block;
+}
 
   .tooltip{
     position      : absolute;
@@ -36,19 +36,19 @@ body {
 
 #header {
   text-align: left;
-  color: #008a77;
+  color: #040117;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .dot {
     cursor: pointer;
-    fill: rgb(245, 9, 139);
+    fill: rgb(245, 29, 9);
     opacity: 1;
     stroke-width: 1;
     stroke: black
   }
 .dot:hover {
-    fill: rgb(245, 9, 139);
+    fill: rgb(245, 9, 48);
     opacity: 0.8;
     stroke: "black";
     stroke-width: 2
@@ -69,14 +69,10 @@ a {
     text-decoration: none
 }
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 .hover-line {
   stroke: #6F257F;
   stroke-width: 2px;
   stroke-dasharray: 3,3;
-}
-.area {
-  fill: teal;
-  opacity: .5
 }
