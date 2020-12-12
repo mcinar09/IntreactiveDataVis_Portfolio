@@ -22,21 +22,21 @@ header, body {
   .section#one > .graph {
     grid-column: 2 / 3;
   }
-  .section#one >.axis-label {
+  .section#one .axis-label {
     font-size: 14px;
     fill: black;
     text-anchor: middle;
     font-weight: bold
   }
-  .section#one > .axis {
-    font-size: 10px
+  .section#one  .axis {
+    font-size: 8px
   }
 
   .section#one > div {
     font-size: medium  
   }
 
-  .section#one > .tooltip{
+  .section#one  .tooltip{
     position      : absolute;
     text-align    : center;
     max-width     : 70px;
@@ -52,38 +52,38 @@ header, body {
     opacity: 0
 }
 
-.section#one >#header {
+.section#one  #header {
   text-align: left;
   color: #008a77;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.section#one > .dot {
+.section#one  .dot {
     cursor: pointer;
-    fill: rgb(245, 9, 139);
+    fill: rgb(248, 76, 76);
     opacity: 1;
     stroke-width: 1;
     stroke: black
   }
-  .section#one > .dot:hover {
-    fill: rgb(245, 9, 139);
+  .section#one  .dot:hover {
+    fill: rgb(245, 77, 77);
     opacity: 0.8;
     stroke: "black";
     stroke-width: 2
   }
   
-  .section#one >.trend {
+  .section#one .trend {
       fill:none;
       stroke: black;
       stroke-width: 2;
       opacity: 0.75;}
 
 
-.section#one >a:hover {
+.section#one  a:hover {
     text-decoration: underline
 }
-.section#one > .hover-line {
-  stroke: #6F257F;
+.section#one .hover-line {
+  stroke: #250a2b;
   stroke-width: 2px;
   stroke-dasharray: 3,3;
 }
