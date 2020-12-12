@@ -2,7 +2,7 @@ export function chart1() {
     /**
   * CONSTANTS AND GLOBALS
   * */
-    const margin = { top: 20, bottom: 50, left: 60, right: 60 },
+    const margin = { top: 10, bottom: 50, left: 60, right: 60 },
         radius = 2, time = 1000,
         default_selection = "Select a Country",
         /**
@@ -28,7 +28,7 @@ export function chart1() {
      * LOAD DATA
      **/
     //Promise.all([
-    d3.csv("../data/co2emission5.csv",
+    d3.csv("Data/co2emission6.csv",
         d => ({
             year: new Date(d.year, 0, 1),
             country: d.country,
