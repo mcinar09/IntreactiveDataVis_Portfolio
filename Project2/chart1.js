@@ -2,8 +2,8 @@ export function chart1() {
     /**
   * CONSTANTS AND GLOBALS
   * */
-    const margin = { top: 20, bottom: 50, left: 60, right: 30 },
-        radius = 3, time = 1000,
+    const margin = { top: 20, bottom: 50, left: 60, right: 60 },
+        radius = 2, time = 1000,
         default_selection = "Select a Country",
         /**
           * This extrapolated function allows us to replace the "G" with "B" min the case of billions.
@@ -53,8 +53,9 @@ export function chart1() {
         console.log("svg", svg);
         console.log("svg.node().clientWidth", svg.node().clientWidth);
         width = svg.node().clientWidth;
-        const aspectRatio = 0.58;
+        const aspectRatio = 0.33;
         height = width * aspectRatio;
+        console.log("height", height);
 
         //Scales
         xScale = d3
@@ -155,7 +156,7 @@ export function chart1() {
             .append("text")
             .attr("class", "axis-label")
             .attr("y", "50%")
-            .attr("dx", "-3em")
+            .attr("dx", "-4em")
             .attr("writing-mode", "vertical-rl")
             .text("CO2 Emissions");
 
