@@ -28,7 +28,7 @@ export function chart1() {
      * LOAD DATA
      **/
     //Promise.all([
-    d3.csv("../data/co2emission5.csv",
+    d3.csv("data/co2emission6.csv",
         d => ({
             year: new Date(d.year, 0, 1),
             country: d.country,
