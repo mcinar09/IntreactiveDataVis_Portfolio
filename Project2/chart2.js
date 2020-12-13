@@ -9,7 +9,7 @@ export function chart2() {
          This extrapolated function allows us to replace the "G" with "B" min the case of billions.
          We cannot do this in the .tickFormat() because we need to pass a function as an argument,
          and replace needs to act on the text (result of the function).  */
-        formatNum = (num) => d3.format(".2s")(num).replace(/G/, 'B'),
+        formatNum = (num) => d3.format(".2s")(num),
         formatComma = (num) => d3.format(",")(num),
         formatDate = d3.timeFormat('%Y');
     let svg, width, height, xscale, yscale, yaxis, xaxis, div, hvlines;
@@ -176,7 +176,7 @@ export function chart2() {
                             div.transition()
                                 .duration(time)
                                 .style("opacity", 0.8)
-                            div.html(`${formatNum(d.rate)}` + " GDP Growth " + `${formatDate(d.year)}`)
+                            div.html(`${formatNum(d.rate)}` + " GDP Growth in " + `${formatDate(d.year)}`)
                                 .style('left', (d3.eventpageX) + "px")
                                 .style("top", (d3.event.pageY - 30) + "px")
 
