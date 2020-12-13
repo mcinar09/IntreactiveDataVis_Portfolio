@@ -27,13 +27,13 @@ export function chart1() {
     /**
      * LOAD DATA
      **/
-    //Promise.all([
+    /*Promise.all([*/
     d3.csv("Data/co2emission6.csv",
         d => ({
             year: new Date(d.year, 0, 1),
             country: d.country,
             emission: +d.emission
-        }))
+        }))//])
         .then(data => {
             console.log('data', data);
             state.data = data;
