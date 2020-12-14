@@ -2,14 +2,14 @@ export function chart2() {
     /**
    * CONSTANTS AND GLOBALS
    * */
-    const margin = { top: 10, bottom: 50, left: 60, right: 60 },
+    const margin = { top: 10, bottom: 60, left: 60, right: 60 },
         radius = 2, time = 1000,
         default_selection = "Select a Country",
         /**
          This extrapolated function allows us to replace the "G" with "B" min the case of billions.
          We cannot do this in the .tickFormat() because we need to pass a function as an argument,
          and replace needs to act on the text (result of the function).  */
-        formatNum = (num) => d3.format(".2s")(num),
+        formatNum = (num) => d3.format(".2f")(num),
         formatComma = (num) => d3.format(",")(num),
         formatDate = d3.timeFormat('%Y');
     let svg, width, height, xscale, yscale, yaxis, xaxis, div, hvlines;
@@ -66,6 +66,31 @@ export function chart2() {
         xaxis = d3.axisBottom(xscale);
         yaxis = d3.axisLeft(yscale).tickFormat(formatNum);
 
+        svg
+            .append("g")
+            .attr("class", "axis x_axis")
+            .attr("transform", `translate(0, ${height - margin.bottom})`)
+            .call(xaxis)
+            .append("text")
+            .attr("class", "axis_label")
+            .attr("x", width - margin.right)
+            .attr("y", -3)
+            .text("Year");
+
+        //add y-axis
+        svg
+            .append("g")
+            .attr("class", "axis y_axis")
+            .attr("transform", `translate(${margin.left}, 0)`)
+            .call(yaxis)
+            .append("text")
+            .attr("class", "axis_label")
+            .attr("y", "50%")
+            .attr("dx", "-4em")
+            .attr("writing-mode", "vertical-rl")
+            .text("GDP Growth Rate");
+
+
         //UI Element Setup
         const selectElement = d3.select("#dropdown2")
             .on("change", function () {
@@ -88,28 +113,29 @@ export function chart2() {
         // in state when we initialize the options
         selectElement.property("value", default_selection);
         //add the xAxis
-        svg
+        /*svg
             .append("g")
-            .attr("class", "axis x_axis")
+            .attr("class", "axis x-axis")
             .attr("transform", `translate(0, ${height - margin.bottom})`)
             .call(xaxis)
             .append("text")
             .attr("class", "axis-label")
             .attr("x", width - margin.right)
-            .attr("y", -6)
+            .attr("y", -5)
+            .attr("dy", "3em")
             .text("Year");
 
         //add y-axis
         svg
             .append("g")
-            .attr("class", "axis y_axis")
+            .attr("class", "axis y-axis")
             .attr("transform", `translate(${margin.left}, 0)`)
             .call(yaxis)
             .append("text")
             .attr("y", "50%")
             .attr("dx", "-4em")
             .attr("writing-mode", "vertical-rl")
-            .text("GDP Growth Rate");
+            .text("GDP Growth Rate");*/
 
         //tooltip
         div = d3
@@ -137,7 +163,7 @@ export function chart2() {
         //update the scale domain (now that our data has changed)
         yscale.domain([d3.min(filteredData2, d => d.rate), d3.max(filteredData2, d => d.rate)]);
         //redraw the yAxis since yScale is updated with the new data
-        d3.select("g.y-axis")
+        d3.select("g.y_axis")
             .transition()
             .duration(time)
             //this updates the yAxis' scale for the updated one
@@ -145,7 +171,7 @@ export function chart2() {
         //update the scale domain  (now that our data has changed)
         xscale.domain([d3.min(filteredData2, d => d.year), d3.max(filteredData2, d => d.year)]);
         //redraw our xAxis since our xScale is updated with the new data
-        d3.select("g.x-axis")
+        d3.select("g.x_axis")
             .transition()
             .duration(time)
             .call(xaxis);
@@ -154,10 +180,10 @@ export function chart2() {
             .area()
             .curve(d3.curveLinear)
             .x(d => xscale(d.year))
-            .y0(d => yscale(0))
-            .y(d => yscale(d.rate));
+            .y(d => yscale(d.rate))
+            .y1(d => yscale(d.rate));
         const dot = svg
-            .selectAll("dot")
+            .selectAll(".dot1")
             .data(filteredData2, d => d.country)
             .join(
                 enter =>
@@ -177,7 +203,7 @@ export function chart2() {
                                 .duration(time)
                                 .style("opacity", 0.8)
                             div.html(`${formatNum(d.rate)}` + " GDP Growth in " + `${formatDate(d.year)}`)
-                                .style('left', (d3.eventpageX) + "px")
+                                .style('left', (d3.event.pageX) + "px")
                                 .style("top", (d3.event.pageY - 30) + "px")
 
                             hvlines
@@ -211,7 +237,9 @@ export function chart2() {
                 selection
                     .transition()
                     .duration(time)
-                    .attr("cy", d => yscale(d.rate)));
+                    .attr("cy", d => yscale(d.rate))
+            );
+
         const line = svg
             .selectAll("path.trend")
             .data([filteredData2])

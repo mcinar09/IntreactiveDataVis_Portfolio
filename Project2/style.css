@@ -1,9 +1,10 @@
 header, body {
     margin: 3%;
+    background-color: #ebf8fc;
   }
   
   .section {
-    background-color: #f2f5f7;
+    background-color: #d4f1f8;
     margin: 2%;
     height: auto;
   }
@@ -16,7 +17,7 @@ header, body {
   }
   
   .section#one > .text {
-    background-color: #e8eaeb;
+    background-color: #cc72a6;
     height: auto;
     margin: 5%;
     grid-column: 1 / 3;
@@ -30,13 +31,13 @@ header, body {
   section#one svg{
     width: 531;
   }
-  .section#one .axis-label {
+  .axis-label {
     font-size: 10px;
-    fill: black;
+    fill: rgb(231, 21, 21);
     text-anchor: middle;
     font-weight: bold
   }
-  .section#one  .axis {
+  .axis {
     font-size: 8px
   }
 
@@ -46,7 +47,7 @@ header, body {
   
   
 
- .tooltip{
+   .tooltip{
     position      : absolute;
     text-align    : center;
     max-width     : 70px;
@@ -68,25 +69,25 @@ header, body {
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.section#one .dot {
+.dot {
     cursor: pointer;
-    fill: rgb(253, 105, 105);
-    opacity: 1;
+    fill: rgb(253, 105, 125);
+    opacity: .8;
     /*stroke-width: 1;
     stroke: black*/
   }
-   .dot:hover {
-    fill: rgb(248, 104, 104);
+  .dot:hover {
+    /*fill: rgb(248, 104, 104);*/
     opacity: 0.7;
     stroke: "black";
-    stroke-width: 2
+    stroke-width: 6
   }
   
-   .trend {
-      fill:none;
-      stroke: black;
-      stroke-width: 2;
-      opacity: 0.75;}
+  .trend {
+    fill:none;
+    stroke: black;
+    stroke-width: 2;
+    opacity: 0.75;}
 
 
   a:hover {
@@ -97,7 +98,8 @@ header, body {
   stroke-width: 2px;
   stroke-dasharray: 3,3;
 }
-.section#one .area {
+
+.area {
     fill: teal;
     opacity: .5
   }
@@ -108,7 +110,7 @@ header, body {
   .section#two {
     display: grid;
     height: 40%;
-    background-color: aliceblue;
+    background-color: rgb(38, 186, 231);
     grid-column-gap: 14px;
     grid-template-columns: 25% 25% 50%;
   }
@@ -116,37 +118,48 @@ header, body {
   .section#two > .text {
     height: auto;
     grid-column: 3 / 4;
-    margin: 6%;
-    background-color: #e8eaeb;
+    margin: 5%;
+    /*background-color: #e8eaeb;*/
   }
   
   .section#two > .graph {
     grid-column: 1 / 3;
     height: auto;
-    background-color: #f2f5f7; 
+    background-color: #dbeeee; 
     /*grid-row: 3;*/
   }
-  .section#two > .axis {
-    font-size: 8px
-  }
+  
 
-  .section#two > div2 {
-    font-size: 12px;
-  }
 
-  .section#two > .dot1 {
-    cursor: pointer;
-    fill: rgb(253, 105, 105);
-    opacity: 1;
-    /*stroke-width: 1;*/
+  .axis_label {
+    font-size: 10px;
+    fill: rgb(238, 19, 19);
+    text-anchor: middle;
+    font-weight: bold
+  }
+  
+
+  .section#two div {
+     display: inline-block;
+     font-size: 12px;
+  }
     
+  .dot1 {
+    cursor: pointer;
+    fill: rgb(120, 105, 253);
+    opacity: 1;
+    /*stroke-width: 1;*/ 
   }
-   .section#two > .dot1:hover {
-    fill: rgb(248, 104, 104);
+  
+  .dot1:hover {
+    /*fill: rgb(248, 104, 104);*/
     opacity: 0.7;
     stroke: "black";
     stroke-width: 2
   }
+  
+ 
+
   svg {
     width: 95%;
     /*height: 100%;*
