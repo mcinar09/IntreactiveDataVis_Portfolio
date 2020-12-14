@@ -3,7 +3,7 @@ export function chart1() {
   * CONSTANTS AND GLOBALS
   * */
     const margin = { top: 10, bottom: 50, left: 60, right: 60 },
-        radius = 2, time = 1000,
+        radius = 3, time = 1000,
         default_selection = "Select a Country",
         /**
           * This extrapolated function allows us to replace the "G" with "B" min the case of billions.
@@ -28,7 +28,7 @@ export function chart1() {
      * LOAD DATA
      **/
     /*Promise.all([*/
-    d3.csv("Data/co2emission6.csv",
+    d3.csv("Data/co2emission1990.csv",
         d => ({
             year: new Date(d.year, 0, 1),
             country: d.country,
@@ -227,7 +227,7 @@ export function chart1() {
                             d3.select(this)
                                 .transition()
                                 .duration(time)
-                                .attr("r", 3 * radius)
+                                .attr("r", 4 * radius)
                             div.transition()
                                 .duration(time)
                                 .style("opacity", 0.8)
