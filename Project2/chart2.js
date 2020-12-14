@@ -214,7 +214,7 @@ export function chart2() {
                                 .attr("y2", height - margin.bottom)
                         })
                         .on("mouseout", function () {
-                            d3.selection(this)
+                            d3.select(this)
                                 .transition()
                                 .duration(time)
                                 .attr("r", radius)

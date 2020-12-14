@@ -68,6 +68,10 @@ header, body {
   color: #008a77;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
+#dropdown {
+  font-size: 10px;
+}
+
 
 .dot {
     cursor: pointer;
@@ -143,7 +147,12 @@ header, body {
      display: inline-block;
      font-size: 12px;
   }
-    
+  #dropdown2 {
+    font-size: 10px;
+  } 
+  
+
+
   .dot1 {
     cursor: pointer;
     fill: rgb(120, 105, 253);
