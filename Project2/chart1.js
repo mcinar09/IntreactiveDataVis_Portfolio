@@ -227,7 +227,7 @@ export function chart1() {
                             d3.select(this)
                                 .transition()
                                 .duration(time)
-                                .attr("r", 4 * radius)
+                                .attr("r", 3 * radius)
                             div.transition()
                                 .duration(time)
                                 .style("opacity", 0.8)
