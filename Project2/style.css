@@ -18,7 +18,8 @@ header, body {
   }
   
   .section#one > .text {
-    background-color: #e8eaeb;
+    background-color: #e3e6e7;
+    font: black;
     height: auto;
     margin: 5%;
     grid-column: 1 / 3;
@@ -120,7 +121,8 @@ header, body {
   }
   
   .section#two > .text {
-    background-color: #e8eaeb;
+    background-color: #e3e6e7;
+    font: black;
     height: auto;
     margin: 5%;
     grid-column: 3 / 4;
