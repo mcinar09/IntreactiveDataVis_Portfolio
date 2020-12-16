@@ -18,7 +18,7 @@ header, body {
   }
   
   .section#one > .text {
-    background-color: #e3e6e7;
+    background-color: lightgray;
     font: black;
     height: auto;
     margin: 5%;
@@ -121,7 +121,7 @@ header, body {
   }
   
   .section#two > .text {
-    background-color: #e3e6e7;
+    background-color: lightgray;
     font: black;
     height: auto;
     margin: 5%;
