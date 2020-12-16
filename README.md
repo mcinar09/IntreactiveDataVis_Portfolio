@@ -23,6 +23,7 @@ In my first exploratory project, I looked at the
 
 [ <b>Total CO<sub>2</sub> emissions</b> from 1950-2017 in Countries. ](https://mcinar09.github.io/IntreactiveDataVis_Portfolio/Project1/index.html)
 
+<br /> 
 
 ![<b> CO<sub> Emissions](./Assets/co2EmissionsFrom1950.png)
 
