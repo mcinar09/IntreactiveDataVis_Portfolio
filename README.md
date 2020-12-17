@@ -27,6 +27,21 @@ In my first exploratory project, I looked at the
 
 ![<b> CO<sub> Emissions](./Assets/co2EmissionsFrom1950.png)
 
+<br />
+<b> US States With their Capitals
+
+![](./Assets/usStates&Capitals.png)
+
+<br />
+<b>Cervical Cancer Cases</b>
+
+![](./Assets/cervicalCancerCases.png)
+
+ <br/>
+<b> SAT Math Scores vs. Reading Scores</b>
+
+![](./Assets/SATmathVsReading.png)
+ <br/>
 
 <br />
 My Prospectus:
