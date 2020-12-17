@@ -27,18 +27,27 @@ In my first exploratory project, I looked at the
 
 ![<b> CO<sub> Emissions](./Assets/co2EmissionsFrom1950.png)
 
+
 <br />
-<b> US States With their Capitals
+
+
+[ <b> US States With their Capitals<b> ](https://mcinar09.github.io/Interactive-Data-Vis-Fall2020/tutorial5_geographic/)
+
+
 
 ![](./Assets/usStates&Capitals.png)
 
 <br />
-<b>Cervical Cancer Cases</b>
+
+[<b>Cervical Cancer Cases</b>](https://mcinar09.github.io/Interactive-Data-Vis-Fall2020/tutorial4_timeseries/)
+
 
 ![](./Assets/cervicalCancerCases.png)
 
  <br/>
-<b> SAT Math Scores vs. Reading Scores</b>
+
+[<b> SAT Math Scores vs. Reading Scores</b>](https://mcinar09.github.io/Interactive-Data-Vis-Fall2020/tutorial3_distributions/)
+
 
 ![](./Assets/SATmathVsReading.png)
  <br/>
