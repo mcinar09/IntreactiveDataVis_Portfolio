@@ -25,7 +25,7 @@ In my first exploratory project, I looked at the
 
 <br /> 
 
-![<b> CO<sub> Emissions](./Assets/co2EmissionsFrom1950.png)
+![ ](./Assets/co2EmissionsFrom1950.png)
 
 
 <br />
@@ -35,7 +35,7 @@ In my first exploratory project, I looked at the
 
 
 
-![](./Assets/usStates&Capitals.png)
+![ ](./Assets/usStates&Capitals.png)
 
 <br />
 
